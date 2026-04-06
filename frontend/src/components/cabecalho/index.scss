@@ -1,0 +1,90 @@
+.cabecalho {
+
+    position: fixed;  // Mantém o cabeçalho fixo no topo
+    top: 0;           // Alinha o cabeçalho ao topo da página
+    width: 100%;      // Garante que o cabeçalho ocupe toda a largura
+    z-index: 1000;    // Garante que o cabeçalho fique acima de outros elementos
+
+
+    background-color: #F4EDE4;
+    padding: 25px 100px;
+    border-bottom: 1px solid #715c5142;  // Linha divisória
+
+    .cabecalho-titulo {
+        color: #715C51;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+    }
+
+    .cabecalho-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .cabecalho-nav {
+        display: flex;
+        gap: 20px;
+
+        .cabecalho-nav-item-link {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            color: #715C51;
+            text-decoration: none;
+            transition: color 0.3s;
+
+            &:hover {
+                color: #433D4A;
+            }
+        }
+    }
+
+    .cabecalho-botao {
+        background-color: #CFC5B8;
+        color: #715C51;
+        padding: 5px 3px 5px 12px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        width: 100px;
+        height: 35px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+
+        img {
+            width: 10px;
+            height: 10px;
+            margin-left: 5px;
+        }
+    }
+    .cabecalho-title-adm {
+      
+        color: #715C51;
+        padding: 5px 3px 5px 12px;
+        border: none;
+        border-radius: 10px;
+        height: 35px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+
+    }
+
+    .cabecalho-admin {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logoff-link {
+        font-family: 'Inter', sans-serif;
+        color: #715C51;
+        font-weight: 500;
+        margin-top: 5px;
+    }
+
+    .logoff-button {
+        color: blue;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}

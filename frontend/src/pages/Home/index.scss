@@ -1,0 +1,531 @@
+.pagina-home {
+    padding-top: 100px; // Ajuste este valor conforme a altura do seu cabeçalho
+    background-color: #F4EDE4;
+    font-family: 'Inter', sans-serif;
+
+    h1 {
+        font-weight: 900;
+        color: #433D4A;
+        font-size: 50px;
+    }
+
+    .primeira-secao {
+        display: flex;
+        padding: 50px 250px;
+        justify-content: center;
+        gap: 365px;
+
+        .primeira-secao-container {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            padding: 50px 0;
+        }
+
+        .subtitulo {
+            font-size: 30px;
+            font-family: 'Inter', sans-serif;
+            color: #7F7F7F;
+            font-weight: 500;
+        }
+
+        .sobre-mim {
+            font-size: 22px;
+            width: 460px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            color: #433D4A;
+        }
+
+        .sobre-mim-fotos {
+            width: 500px;
+            height: auto;
+        }
+
+        .primeira-secao-botoes {
+            display: flex;
+            gap: 30px;
+        }
+
+        .botao {
+            font-size: 22px;
+            background-color: #715C51;
+            color: hwb(34 72% 19%);
+            padding: 5px 0;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            width: 175px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+
+            img {
+                width: 15px;
+                height: 15px;
+                margin-left: 5px;
+            }
+        }
+
+        .botao.secundario {
+            background-color: #CFC5B8;
+            color: #715C51;
+        }
+
+    }
+
+    .segunda-secao {
+        background-color: #CFC5B8;
+        padding: 50px 250px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .segunda-secao-container {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+            text-align: center;
+
+
+
+            .informacao {
+                font-family: 'Inter', sans-serif;
+                font-weight: 500;
+                color: #000;
+                font-size: 16px;
+            }
+
+            .formacoes {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                margin: 20px 0;
+                gap: 80px;
+
+
+                p {
+                    font-family: 'Inter', sans-serif;
+                    font-weight: 500;
+                    color: #433D4A;
+                }
+            }
+
+            .formacoes-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                gap: 10px;
+            }
+
+
+            .formacoes::before {
+                content: "";
+                position: absolute;
+                top: 75%;
+                left: 0;
+                right: 0;
+                height: 8px;
+                background-color: #433D4A;
+                z-index: 0;
+            }
+
+
+        }
+    }
+
+    .terceira-secao-experiencias {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 250px;
+        gap: 30px;
+
+        .titulo-sub {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            width: 1140px;
+
+        }
+
+        h1 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 900;
+            color: #433D4A;
+            font-size: 50px;
+        }
+
+        .informacao {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            color: #000;
+            font-size: 16px;
+        }
+
+        .carrossel {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 60px;
+        }
+
+        .carrossel .carrossel-cartao {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width: 400px;
+            gap: 20px;
+        }
+
+        .carrossel .carrossel-cartao img {
+            width: 400px;
+        }
+
+        .carrossel .carrossel-cartao .carrossel-cartao-descricao {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            color: #433D4A;
+            font-size: 14px;
+        }
+    }
+
+    .quarta-secao-projetos-notaveis {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 250px;
+        gap: 30px;
+        background-color: #CFC5B8;
+
+        h1 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 900;
+            color: #433D4A;
+            font-size: 50px;
+        }
+
+        .grid-projetos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 50px;
+
+        }
+
+
+        .grid-projetos .grid-projetos-cartao img {
+            width: 400px;
+            height: 259px;
+            border-radius: 45px;
+        }
+    }
+
+    .quinta-secao-depoimentos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 100px 90px 50px;
+        font-family: 'Inter', sans-serif;
+        color: #433D4A;
+        gap: 60px;
+
+
+        .titulo-subtitulo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        h1 {
+            font-weight: 900;
+            font-size: 50px;
+        }
+
+        .subtitulo {
+            font-weight: 500;
+            color: #000;
+            font-size: 16px;
+        }
+
+        hr {
+            border-color: #DEB35C;
+        }
+
+        .talk-bubble {
+            display: inline-block;
+            position: relative;
+            width: 1150px;
+            padding-top: 30px;
+            background-color: #D4D4D8;
+            border-radius: 45px;
+            padding: 0px 50px 0px 50px;
+        }
+
+        .talktext {
+            padding: 1em;
+            text-align: left;
+            line-height: 1.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .talktext p {
+            /* remove webkit p margins */
+            -webkit-margin-before: 0em;
+            -webkit-margin-after: 0em;
+        }
+
+        /*Right triangle, placed bottom left side slightly in*/
+        .tri-right.btm-left-in:after {
+            content: ' ';
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: 60px;
+            right: auto;
+            top: auto;
+            bottom: -40px;
+            z-index: 1;
+            border: 30px solid;
+            border-color: #D4D4D8 transparent transparent #D4D4D8;
+        }
+
+        .baloes-depoimentos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 60px;
+
+            .baloes-depoimentos-balao {
+                display: flex;
+            }
+
+            .baloes-depoimentos-balao-foto {
+                width: 147px;
+                height: 147px;
+                margin-right: 45px;
+                z-index: 2;
+            }
+
+            .baloes-depoimentos-balao-texto {
+
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                justify-content: center;
+                margin-left: 15px;
+            }
+
+            .baloes-depoimentos-balao-texto-nome {
+                font-size: 24px;
+            }
+
+            .baloes-depoimentos-balao-texto-depoimento {
+                font-size: 20px;
+                font-style: italic;
+            }
+        }
+
+    }
+
+    .sexta-secao-ferramentas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 250px;
+        gap: 80px;
+        background-color: #CFC5B8;
+
+        font-family: 'Inter', sans-serif;
+        color: #433D4A;
+
+        .titulo-subtitulo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        h1 {
+            font-weight: 900;
+            font-size: 50px;
+        }
+
+        .subtitulo {
+            font-weight: 500;
+            color: #000;
+            font-size: 16px;
+        }
+
+        .grid-ferramentas {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 1000px;
+            gap: 50px;
+        }
+
+        .grid-ferramentas-ferramenta {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .grid-ferramentas-ferramenta img {
+            width: 150px;
+            margin-bottom: 10px;
+        }
+
+        .grid-ferramentas-ferramenta h2 {
+            font-size: 24px;
+        }
+
+        .grid-ferramentas-ferramenta p {
+            font-size: 20px;
+        }
+    }
+
+    .setima-secao-contato {
+        display: flex;
+        gap: 150px;
+        align-items: center;
+        background-color: #F4EDE4;
+        border-radius: 15px;
+        font-family: 'Inter', sans-serif;
+
+        .secao-contato-1 {
+            display: flex;
+            justify-content: end;
+            flex-direction: column;
+            height: 852px;
+            width: 600px;
+            background-image: url('../../../public/assets/images/designer.png');
+            text-align: center;
+            background-size: cover;
+
+            h1 {
+                font-family: 'Inter', sans-serif;
+                color: #E4DCCF;
+                font-weight: 700;
+                font-size: 45px;
+                margin-bottom: 20px;
+
+            }
+
+            p {
+                font-family: 'Inter', sans-serif;
+                color: #E4DCCF;
+                font-weight: 500;
+                font-size: 25px;
+                margin-bottom: 60px;
+            }
+        }
+
+        .secao-contato-2 {
+            width: 36%;
+            background-color: #e9dbc8;
+            padding: 40px;
+            border: 1px solid #4a4a4a;
+            border-radius: 10px;
+
+            h1 {
+                text-align: center;
+                font-size: 1.8rem;
+                margin-bottom: 20px;
+                color: #4a4a4a;
+                font-size: 50px;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+
+                label {
+                    font-size: 1rem;
+                    margin-bottom: 10px;
+                    color: #333;
+                    display: flex;
+                    flex-direction: column;
+
+                    input,
+                    textarea {
+                        font-family: 'Inter', sans-serif;
+                        margin-top: 5px;
+                        padding: 10px;
+                        font-size: 1rem;
+                        border: 1px solid #ccc;
+                        border-radius: 5px;
+                        background-color: #fff;
+                        width: 100%;
+                    }
+
+                    select {
+                        margin-top: 5px;
+                        padding: 10px;
+                        font-size: 1rem;
+                        border: 1px solid #ccc;
+                        border-radius: 5px;
+                        background-color: #fff;
+                        width: 170px;
+                    }
+
+                    textarea {
+                        height: 120px;
+                        resize: none;
+                    }
+                }
+
+                .botao-enviar-mensagem {
+                    width: 120px;
+                    margin-top: 20px;
+                    background-color: #DEB35C;
+                    color: white;
+                    padding: 12px;
+                    font-size: 1rem;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+
+                    &:hover {
+                        background-color: #b5894b;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 768px) {
+            //se adapta a um desing responsivo no caso do fomrulario
+            flex-direction: column;
+
+            .secao-contato-1,
+            .secao-contato-2 {
+                width: 100%;
+            }
+
+            .secao-contato-1 {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+
+}

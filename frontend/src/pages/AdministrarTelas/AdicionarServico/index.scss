@@ -1,0 +1,117 @@
+.pagina-adicionar-servico {
+    padding-top: 100px; // Ajuste este valor conforme a altura do seu cabeçalho
+
+    background-color: #CFC5B8;
+    font-family: 'Inter', sans-serif;
+
+    .linha-voltar {
+        display: flex;
+        justify-content: space-between;
+
+
+        width: 100%;
+        padding-inline: 200px;
+        margin-bottom: -20px;
+
+        .spacer {
+            gap: 10px;
+            width: 300px;
+
+            button {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 1px;
+
+                h2 {
+                    font-size: 25px;
+                }
+            }
+        }
+
+        h1 {
+            font-weight: 900;
+            color: #433D4A;
+            font-size: 45px;
+            margin-bottom: 50px;
+        }
+
+        button {
+            border: none;
+            background-color: transparent;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        img {
+            width: 50px;
+        }
+    }
+
+    .criar-servico {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
+
+
+
+        .linha {
+            display: flex;
+            justify-content: flex-start;
+            gap: 30px;
+            margin: 25px 0px;
+
+            .campo-input {
+                display: flex;
+                flex-direction: column;
+
+                .legenda-input {
+                    font-weight: 600;
+                    color: #433D4A;
+                    font-size: 20px;
+                    margin-bottom: 12px;
+
+                }
+
+                input {
+                    background-color: #FFF;
+                    border-radius: 10px;
+                    border: none;
+                    height: 45px;
+                    padding: 0px 25px;
+                }
+
+                select {
+                    background-color: #FFF;
+                    border-radius: 10px;
+                    border: none;
+                    height: 45px;
+                    padding: 0px 25px;
+
+                }
+            }
+        }
+
+        .botao-salvar {
+            background-color: #433D4A;
+            width: 180px;
+            height: 50px;
+            color: white;
+            border-radius: 10px;
+            border: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    }
+
+
+}
+
+html {
+    height: 100%;
+    background-color: #CFC5B8;
+
+}
