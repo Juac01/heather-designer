@@ -1,105 +1,131 @@
-Heather Design — Plataforma Completa
+# Heather Design — Plataforma Completa
 
-Plataforma de portfólio para designers desenvolvida em equipe com sistema de login e gerenciamento de projetos. Composta por uma landing page pública e um painel administrativo, seguindo uma arquitetura fullstack com frontend, backend e banco de dados.
+Plataforma de portfólio para designers com landing page pública
+e painel administrativo protegido. Arquitetura fullstack com
+React, Node.js e MySQL, hospedada na Azure.
 
-Projeto hospedado na nuvem Azure com acesso público via IP.
+---
 
-Projeto funcional localmente (desenvolvido e testado antes do deploy)
+## Contexto
 
-Contexto
+A designer precisava de uma plataforma própria para exibir seus
+trabalhos e gerenciar conteúdo de forma independente — com
+controle total sobre layout, dados e apresentação.
 
-A designer precisava de uma plataforma própria para exibir seus trabalhos e gerenciar conteúdo de forma independente. A solução foi um sistema completo com landing page pública e painel admin protegido por autenticação, utilizando arquitetura cliente-servidor com React no frontend, Node.js no backend e MySQL para persistência de dados.
+### Problema
 
-Problema
+Designers frequentemente dependem de plataformas externas e
+soluções limitadas, sem autonomia sobre conteúdo ou dados.
 
-Designers frequentemente dependem de plataformas externas ou soluções limitadas para apresentar seus trabalhos, sem controle total sobre conteúdo, layout e dados.
+### Solução
 
-Solução
+Sistema completo com:
 
-Desenvolvimento de uma plataforma própria que permite:
+- Exibição profissional de portfólio
+- Gerenciamento de projetos e serviços via painel admin
+- Autenticação JWT para acesso protegido
+- Autonomia total sobre dados e apresentação
 
-Exibição profissional de portfólio
-Gerenciamento completo de projetos e serviços
-Controle de conteúdo via painel administrativo
-Autonomia total sobre dados e apresentação
-Abordagem
+---
 
-O sistema foi estruturado seguindo uma arquitetura cliente-servidor:
+## Tecnologias
 
-Frontend responsável pela interface e experiência do usuário
-Backend responsável pelas regras de negócio e API REST
-Banco de dados para armazenamento estruturado
-Deploy em nuvem utilizando Azure
-Tecnologias
-Frontend
-React
-React Router DOM
-Axios
-Chart.js
-Swiper
-SCSS
-Backend
-Node.js
- + Express
-JWT (jsonwebtoken)
-Multer
-dotenv
-CORS
-Banco de Dados
-MySQL
-Infraestrutura
-Deploy na Azure
-Funcionalidades
-Área Pública
-Exibição de portfólio
-Carrossel de projetos
-Informações da designer
-Formulário de contato
-Área Administrativa
-Autenticação com JWT
-CRUD de projetos
-CRUD de serviços
-Upload de imagens
-Gerenciamento de mensagens
-Visualização de faturamento mensal
-Arquitetura
-[ Frontend (React) ]
+| Camada        | Tecnologias                                      |
+|---------------|--------------------------------------------------|
+| Frontend      | React, React Router DOM, Axios, Chart.js, Swiper, SCSS |
+| Backend       | Node.js, Express, JWT, Multer, dotenv, CORS      |
+| Banco de dados| MySQL                                            |
+| Infraestrutura| Azure (Cloud Hosting)                            |
+
+---
+
+## Funcionalidades
+
+### Área Pública
+
+- Exibição do portfólio com carrossel de projetos
+- Informações da designer
+- Formulário de contato
+
+### Área Administrativa
+
+- Autenticação com JWT
+- CRUD de projetos e serviços
+- Upload de imagens
+- Gerenciamento de mensagens
+- Visualização de faturamento mensal
+
+---
+
+## Arquitetura
+
+```
+[ Frontend — React ]
         ↓
-[ API REST (Node.js + Express) ]
+[ API REST — Node.js + Express ]
         ↓
-[ Banco de Dados (MySQL) ]
+[ Banco de Dados — MySQL ]
         ↓
-[ Azure (Cloud Hosting) ]
-Autenticação
+[ Azure — Cloud Hosting ]
+```
 
-O sistema utiliza JWT para proteger rotas administrativas.
+### Autenticação
 
+Rotas administrativas protegidas via JWT.
+O token é gerado no login e enviado no header das requisições:
+
+```
 x-access-token: <token>
+```
 
-O token é gerado no login e deve ser armazenado pelo cliente para acesso às rotas protegidas.
+---
 
-Estrutura do Projeto
-/frontend  # Interface do usuário (React)
-/backend   # API e regras de negócio (Node.js)
-Como executar localmente
-Backend
+## Estrutura do Projeto
+
+```
+/
+├── frontend/    # Interface do usuário (React)
+└── backend/     # API e regras de negócio (Node.js)
+```
+
+---
+
+## Como Executar Localmente
+
+### Backend
+
+```bash
 cd backend
 npm install
 npm start
-Frontend
+```
+
+### Frontend
+
+```bash
 cd frontend
 npm install
 npm start
+```
 
-Certifique-se de que o backend está rodando antes de iniciar o frontend.
+> Certifique-se de que o backend está rodando antes de
+> iniciar o frontend.
 
-Deploy
+---
 
-O projeto foi implantado na Azure, permitindo acesso público via IP e simulação de ambiente real de produção.
+## Deploy
 
-O desenvolvimento seguiu um fluxo completo:
+Projeto implantado na Azure com acesso público via IP.
 
-Desenvolvimento local → Testes → Deploy na Azure → Validação em produção
-Equipe
+Fluxo de desenvolvimento:
 
-Projeto desenvolvido em equipe como simulação de um ambiente real de desenvolvimento, com foco em aplicação de boas práticas e construção de um sistema completo.
+```
+Desenvolvimento local → Testes → Deploy na Azure → Validação
+```
+
+---
+
+## Equipe
+
+Desenvolvido em equipe como simulação de ambiente real,
+com foco em boas práticas e entrega de um sistema completo.
