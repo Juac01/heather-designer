@@ -1,19 +1,20 @@
-# 🎨 Heather Design — Frontend
+# Heather Design — Frontend
 
 Plataforma de portfólio desenvolvida para a **Heather Designer**, criada em equipe com o objetivo de aprender e simular conceitos reais de desenvolvimento web. O projeto conta com uma **landing page pública** para exibição dos trabalhos e um **painel administrativo** protegido por autenticação.
 
 > Projeto hospedado na nuvem **Azure** com acesso público via IP.
+
 > Projeto funcional localmente
 
 ---
 
-## 💡 Contexto
+## Contexto
 
 A designer precisava de uma plataforma própria para exibir seus trabalhos e gerenciar conteúdo de forma independente. A solução foi um sistema completo com landing page pública e painel admin protegido por login, com arquitetura cliente-servidor usando **React** no front, **Node.js** no back e **MySQL** para os dados.
 
 ---
 
-## 🛠️ Tecnologias
+## Tecnologias
 
 - [React](https://react.dev/) + [React Router DOM](https://reactrouter.com/)
 - [Axios](https://axios-http.com/) — consumo da API REST
@@ -25,7 +26,7 @@ A designer precisava de uma plataforma própria para exibir seus trabalhos e ger
 
 ---
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 src/
@@ -49,7 +50,7 @@ src/
 
 ---
 
-## 📌 Rotas da Aplicação
+## Rotas da Aplicação
 
 | Rota                   | Acesso  | Descrição                                |
 | ---------------------- | ------- | ---------------------------------------- |
@@ -64,13 +65,13 @@ src/
 
 ---
 
-## 🔐 Autenticação
+## Autenticação
 
 O login é feito via **JWT**. O token retornado pela API é armazenado no `localStorage` e enviado no header `x-access-token` em todas as requisições protegidas. Rotas do painel administrativo redirecionam automaticamente para `/login` caso o token esteja ausente.
 
 ---
 
-## ⚙️ Configuração da API
+## Configuração da API
 
 O arquivo `src/api/constantes.js` define a URL base da API. Basta comentar/descomentar a linha conforme o ambiente:
 
@@ -84,7 +85,7 @@ export const API_URL = "http://localhost:3010";
 
 ---
 
-## 🚀 Como executar localmente
+## Como executar localmente
 
 ```bash
 # Instalar dependências
@@ -98,8 +99,6 @@ npm start
 
 ---
 
-## 👥 Equipe
+## Equipe
 
 Projeto desenvolvido em equipe como simulação de um ambiente real de desenvolvimento.
-
-> **Backend:** [heather-design-backend](../heather-design-backend)

@@ -1,19 +1,20 @@
-# 🔧 Heather Design — Backend
+# Heather Design — Backend
 
 API REST desenvolvida para a plataforma de portfólio da **Heather Designer**, criada em equipe com o objetivo de aprender e simular conceitos reais de desenvolvimento web. Responsável por autenticação, gerenciamento de projetos, serviços, mensagens de contato e upload de imagens.
 
 > Projeto hospedado na nuvem **Azure** com acesso público via IP.
+
 > Projeto funcional localmente
 
 ---
 
-## 💡 Contexto
+## Contexto
 
 A designer precisava de uma plataforma própria para exibir seus trabalhos e gerenciar conteúdo de forma independente. A solução foi um sistema completo com landing page pública e painel admin protegido por login, com arquitetura cliente-servidor usando **React** no front, **Node.js** no back e **MySQL** para os dados.
 
 ---
 
-## 🛠️ Tecnologias
+## Tecnologias
 
 - [Node.js](https://nodejs.org/) + [Express](https://expressjs.com/)
 - [MySQL](https://www.mysql.com/) com [mysql2](https://github.com/sidorares/node-mysql2)
@@ -25,7 +26,7 @@ A designer precisava de uma plataforma própria para exibir seus trabalhos e ger
 
 ---
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 src/
@@ -56,7 +57,7 @@ src/
 
 ---
 
-## 🔐 Autenticação
+## Autenticação
 
 As rotas protegidas exigem o token JWT no header da requisição:
 
@@ -68,7 +69,7 @@ O token é gerado no endpoint `/login` e deve ser armazenado pelo cliente.
 
 ---
 
-## ⚙️ Variáveis de Ambiente
+## Variáveis de Ambiente
 
 Crie um arquivo `.env` na raiz do projeto com as seguintes variáveis:
 
@@ -83,7 +84,7 @@ MYSQL_DB=
 
 ---
 
-## 🚀 Como executar localmente
+## Como executar localmente
 
 ```bash
 # Instalar dependências
@@ -97,8 +98,7 @@ npm start
 
 ---
 
-## 👥 Equipe
+## Equipe
 
 Projeto desenvolvido em equipe como simulação de um ambiente real de desenvolvimento.
 
-> **Frontend:** [heather-design-frontend](../heather-design-frontend)
