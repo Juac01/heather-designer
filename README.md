@@ -1,38 +1,36 @@
 Heather Design — Plataforma Completa
 
-Plataforma web de portfólio para designers, desenvolvida em equipe, com landing page pública e painel administrativo com autenticação, permitindo gerenciamento completo de projetos, serviços e conteúdo.
+Plataforma de portfólio para designers desenvolvida em equipe com sistema de login e gerenciamento de projetos. Composta por uma landing page pública e um painel administrativo, seguindo uma arquitetura fullstack com frontend, backend e banco de dados.
 
-Hospedado na nuvem Azure com acesso público via IP
-Arquitetura fullstack: Frontend + Backend + Banco de Dados
+Projeto hospedado na nuvem Azure com acesso público via IP.
 
-Visão Geral
+Projeto funcional localmente (desenvolvido e testado antes do deploy)
 
-O Heather Design é um sistema completo que simula um produto real de mercado, permitindo que designers tenham autonomia para:
+Contexto
 
-Exibir seus trabalhos de forma profissional
-Gerenciar projetos e serviços
-Controlar conteúdo sem depender de terceiros
-❗ Problema
+A designer precisava de uma plataforma própria para exibir seus trabalhos e gerenciar conteúdo de forma independente. A solução foi um sistema completo com landing page pública e painel admin protegido por autenticação, utilizando arquitetura cliente-servidor com React no frontend, Node.js no backend e MySQL para persistência de dados.
+
+Problema
 
 Designers frequentemente dependem de plataformas externas ou soluções limitadas para apresentar seus trabalhos, sem controle total sobre conteúdo, layout e dados.
 
-💡 Solução
+Solução
 
-Foi desenvolvida uma plataforma própria com:
+Desenvolvimento de uma plataforma própria que permite:
 
-Landing page pública para exibição do portfólio
-Painel administrativo protegido por login
-Sistema completo de gerenciamento de conteúdo
-Deploy na nuvem (Azure) com acesso público
-Abordagem Técnica
+Exibição profissional de portfólio
+Gerenciamento completo de projetos e serviços
+Controle de conteúdo via painel administrativo
+Autonomia total sobre dados e apresentação
+Abordagem
 
-O projeto segue uma arquitetura cliente-servidor (fullstack):
+O sistema foi estruturado seguindo uma arquitetura cliente-servidor:
 
-Frontend: interface moderna e interativa
-Backend: API REST para regras de negócio
-Banco de dados: armazenamento estruturado
-Cloud (Azure): deploy e acesso público
-Stack Tecnológica
+Frontend responsável pela interface e experiência do usuário
+Backend responsável pelas regras de negócio e API REST
+Banco de dados para armazenamento estruturado
+Deploy em nuvem utilizando Azure
+Tecnologias
 Frontend
 React
 React Router DOM
@@ -42,52 +40,48 @@ Swiper
 SCSS
 Backend
 Node.js
-Express
-JWT (autenticação)
-Multer (upload de imagens)
+ + Express
+JWT (jsonwebtoken)
+Multer
 dotenv
 CORS
 Banco de Dados
 MySQL
 Infraestrutura
-Azure (deploy e hospedagem)
-
-Funcionalidades Principais
+Deploy na Azure
+Funcionalidades
 Área Pública
 Exibição de portfólio
 Carrossel de projetos
 Informações da designer
 Formulário de contato
 Área Administrativa
-Login com autenticação JWT
-CRUD de projetos (portfólio)
+Autenticação com JWT
+CRUD de projetos
 CRUD de serviços
 Upload de imagens
-Visualização de mensagens
-Dashboard com faturamento mensal
-Arquitetura do Sistema
+Gerenciamento de mensagens
+Visualização de faturamento mensal
+Arquitetura
 [ Frontend (React) ]
-↓
+        ↓
 [ API REST (Node.js + Express) ]
-↓
+        ↓
 [ Banco de Dados (MySQL) ]
-↓
+        ↓
 [ Azure (Cloud Hosting) ]
 Autenticação
 
-O sistema utiliza JWT (JSON Web Token) para proteger rotas administrativas:
+O sistema utiliza JWT para proteger rotas administrativas.
 
-Login gera um token
-Token é armazenado no cliente
-Enviado em requisições protegidas via header:
 x-access-token: <token>
+
+O token é gerado no login e deve ser armazenado pelo cliente para acesso às rotas protegidas.
+
 Estrutura do Projeto
-
-O repositório está dividido em duas partes principais:
-
-/frontend → Interface do usuário (React)
-/backend → API e regras de negócio (Node.js)
-Como executar o projeto
+/frontend  # Interface do usuário (React)
+/backend   # API e regras de negócio (Node.js)
+Como executar localmente
 Backend
 cd backend
 npm install
@@ -97,43 +91,15 @@ cd frontend
 npm install
 npm start
 
-Certifique-se de que o backend está rodando antes do frontend
+Certifique-se de que o backend está rodando antes de iniciar o frontend.
 
-Configuração
-Variáveis de ambiente (Backend)
-
-Crie um arquivo .env:
-
-PORT=3010
-
-MYSQL_HOST=
-MYSQL_USER=
-MYSQL_PWD=
-MYSQL_DB=
 Deploy
 
-O projeto foi implantado na Azure, permitindo:
+O projeto foi implantado na Azure, permitindo acesso público via IP e simulação de ambiente real de produção.
 
-Acesso público via IP
-Simulação de ambiente real de produção
-Integração completa entre front, back e banco
+O desenvolvimento seguiu um fluxo completo:
+
+Desenvolvimento local → Testes → Deploy na Azure → Validação em produção
 Equipe
 
-Projeto desenvolvido em equipe com foco em:
-
-Simular ambiente real de desenvolvimento
-Aplicar boas práticas de arquitetura
-Construir um produto funcional completo
-Diferenciais do Projeto
-✔️ Fullstack completo (frontend + backend + banco)
-✔️ Autenticação real com JWT
-✔️ Upload de imagens
-✔️ Dashboard com dados
-✔️ Deploy em cloud (Azure)
-✔️ Estrutura escalável e organizada
-Possíveis Melhorias Futuras
-Deploy com domínio personalizado
-Sistema de permissões (multiusuário)
-Integração com pagamentos
-Otimização de performance
-CI/CD pipeline
+Projeto desenvolvido em equipe como simulação de um ambiente real de desenvolvimento, com foco em aplicação de boas práticas e construção de um sistema completo.
