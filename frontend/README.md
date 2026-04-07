@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+# 🎨 Heather Design — Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Plataforma de portfólio desenvolvida para a **Heather Designer**, criada em equipe com o objetivo de aprender e simular conceitos reais de desenvolvimento web. O projeto conta com uma **landing page pública** para exibição dos trabalhos e um **painel administrativo** protegido por autenticação.
 
-## Available Scripts
+> Projeto hospedado na nuvem **Azure** com acesso público via IP.
+> Projeto funcional localmente
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 💡 Contexto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+A designer precisava de uma plataforma própria para exibir seus trabalhos e gerenciar conteúdo de forma independente. A solução foi um sistema completo com landing page pública e painel admin protegido por login, com arquitetura cliente-servidor usando **React** no front, **Node.js** no back e **MySQL** para os dados.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠️ Tecnologias
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [React](https://react.dev/) + [React Router DOM](https://reactrouter.com/)
+- [Axios](https://axios-http.com/) — consumo da API REST
+- [Chart.js](https://www.chartjs.org/) / [react-chartjs-2](https://react-chartjs-2.js.org/) — gráfico de faturamento mensal
+- [Swiper](https://swiperjs.com/) — carrossel de portfólio
+- [React Hot Toast](https://react-hot-toast.com/) / [React Toastify](https://fkhadra.github.io/react-toastify/) — notificações
+- SCSS — estilização
+- Deploy na **Azure**
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📁 Estrutura do Projeto
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+src/
+├── api/
+│   └── constantes.js              # URL base da API (local ou Azure)
+├── components/
+│   ├── cabecalho/                 # Header público e admin
+│   ├── cardPortfolio/             # Card de projeto com ações de editar/excluir
+│   ├── carrossel/                 # Carrossel com Swiper
+│   └── rodape/                    # Rodapé
+├── pages/
+│   ├── Home/                      # Landing page pública
+│   ├── Login/                     # Tela de autenticação
+│   ├── naoEncontrado/             # Página 404
+│   └── AdministrarTelas/
+│       ├── HomeAdmin/             # Painel: portfólio, agenda e mensagens
+│       ├── AdicionarServico/      # Criar ou editar serviço
+│       ├── adicionarPortfolio/    # Criar ou editar projeto do portfólio
+│       └── FaturamentoMensal/     # Gráfico de faturamento mensal
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📌 Rotas da Aplicação
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+| Rota                   | Acesso  | Descrição                                |
+| ---------------------- | ------- | ---------------------------------------- |
+| `/` ou `/home`         | Público | Landing page da designer                 |
+| `/login`               | Público | Login da administradora                  |
+| `/admin`               | Admin   | Painel com portfólio, agenda e mensagens |
+| `/criar-servico`       | Admin   | Adicionar novo serviço                   |
+| `/criar-servico/:id`   | Admin   | Editar serviço existente                 |
+| `/criar-portfolio`     | Admin   | Adicionar novo projeto                   |
+| `/criar-portfolio/:id` | Admin   | Editar projeto existente                 |
+| `/faturamento`         | Admin   | Gráfico de faturamento mensal            |
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🔐 Autenticação
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+O login é feito via **JWT**. O token retornado pela API é armazenado no `localStorage` e enviado no header `x-access-token` em todas as requisições protegidas. Rotas do painel administrativo redirecionam automaticamente para `/login` caso o token esteja ausente.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## ⚙️ Configuração da API
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+O arquivo `src/api/constantes.js` define a URL base da API. Basta comentar/descomentar a linha conforme o ambiente:
 
-### Code Splitting
+```js
+// Ambiente local
+export const API_URL = "http://localhost:3010";
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+// Ambiente Azure (descomentar para deploy)
+// export const API_URL = 'http://52.233.83.184:3010'
+```
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🚀 Como executar localmente
 
-### Making a Progressive Web App
+```bash
+# Instalar dependências
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# Iniciar o projeto
+npm start
+```
 
-### Advanced Configuration
+> Certifique-se de que o backend está rodando na porta `3010` antes de iniciar o frontend.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 👥 Equipe
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Projeto desenvolvido em equipe como simulação de um ambiente real de desenvolvimento.
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> **Backend:** [heather-design-backend](../heather-design-backend)
